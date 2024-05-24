@@ -116,5 +116,6 @@ if __name__ == "__main__":
             for i, peptide in enumerate(peptides):
                 if len(peptide) >= pepmin:
                     outfile.write(f"{prot} peptide {i+1:03d}\n{peptide}\n")
+                    print(f"{prot} peptide {i+1:03d}\n{peptide}")
 
-    print("Digestion completed. Results written to", output_file)
+   # print("Digestion completed. Results written to", output_file)

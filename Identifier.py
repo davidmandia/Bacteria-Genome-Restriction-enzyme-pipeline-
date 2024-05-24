@@ -25,7 +25,15 @@ def readData(file="mass_to_charge file.txt", lower=1000, upper=1500):
                 pepseq = line.split()[5]
 
                 #print("data = ",protein, pepnum, mass, pepseq)
-                
+                # print(mass)
+                # print(lower)
+                # print(type(mass), type(lower))
+
+                # When run as pipelin in Bash it needs to be converted 
+                lower = float(lower)
+                upper = float(upper)
+                mass = float(mass)
+                print(type(mass))
                 if (float(mass) < lower or float(mass) > upper):  # Exclude the proteins which mass-to charge ratio is not within the bounds
                     continue
 
@@ -186,7 +194,7 @@ if __name__ == "__main__":
     pepmass = {}
 
     #read file given file data and bounds
-    pepmass = readData(file, range0 , range1)
+    pepmass = readData(file, float(range0) , float(range1))
     Mode, W = determine_mode(binsize, W, s)
 
     # mass _accuracy 

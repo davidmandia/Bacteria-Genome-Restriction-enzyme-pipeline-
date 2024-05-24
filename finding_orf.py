@@ -137,3 +137,4 @@ if __name__ == "__main__":
         orf_details_rev, _, lengths_rev, starts_rev = find_orf(rev_comp_genome, args.min_orf_length)
         for i, (protein_name, start_position, orf_length, current_orf) in enumerate(orf_details_rev):
             outfile.write(">{}_reverse \t (Start: {} \t Length: {} bases) \n{}*\n".format(protein_name, starts_rev[i], lengths_rev[i], current_orf))
+            print(">{}_reverse \t (Start: {} \t Length: {} bases) \n{}*".format(protein_name, starts_rev[i], lengths_rev[i], current_orf))

@@ -84,5 +84,7 @@ if __name__ == "__main__":
             # Write sequence name, peptide mass, charge, and sequence to output file
             ofile.write(f"{seq_name.split(',')[0]} {seq_name.split(',')[1]} "
                         f"{mass_to_charge} {charge} 0 {seq}\n")
+            print(f"{seq_name.split(',')[0]} {seq_name.split(',')[1]} "
+                        f"{mass_to_charge} {charge} 0 {seq}")
 
-    print("Peptide mass calculation completed. Results written to", outputfile)
+    #print("Peptide mass calculation completed. Results written to", outputfile)
