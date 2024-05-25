@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
 
+"""
+Script to identify and count peptides within a specified mass-to-charge (m/z) range in a given data file.
+
+Usage:
+    python peptide_analyzer.py <fileName> -s <start> -e <end> [-b <binsize>] [-w <window>] [-ss <stepsize>] [-ma <massaccuracy>]
+
+Arguments:
+    <fileName>: Name of the file containing peptide data. The format must contain the name of the sequence, m/z charge, and sequence.
+    -s, --start: Lower bound of m/z range (required).
+    -e, --end: Upper bound of m/z range (required).
+    -b, --binsize: Binsize in m/z units for Mode 2 (optional).
+    -w, --window: Window size in m/z units for Mode 3 (optional).
+    -ss, --stepsize: Step size in m/z units for Mode 3 (optional).
+    -ma, --massaccuracy: Mass accuracy of the instrument, specified in Dalton or ppm (optional).
+
+Output:
+    Mode 1: Prints the number of peptides within the specified m/z range.
+    Mode 2: Generates a file containing uniquely identified proteins and their details. Plots a histogram of the mass-to-charge distribution.
+    Mode 3: Generates a file containing uniquely identified proteins using the sliding window method. Plots a graph of the mass-to-charge distribution using sliding windows.
+"""
+
 import argparse
 
 # Function to read data from the file and filter peptides by mass range
