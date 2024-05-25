@@ -40,3 +40,9 @@ This pipeline automates the process of identifying and analyzing peptides from a
 To automate the process, use the provided bash script `run_pipeline.sh`:
 ```bash
 ./run_pipeline.sh <min_orf> <restriction_type> <pepmin> <mass_type> <start> <end>
+
+### Example of output in Mode 2
+
+   - It returns a graph with count of peptides fragment with m/z ratio within that bin
+![Mass to charge distribution](https://github.com/davidmandia/Bacteria-Genome-Restriction-enzyme-pipeline-/blob/main/Mass%20to%20charge%20distribution.png)
+
