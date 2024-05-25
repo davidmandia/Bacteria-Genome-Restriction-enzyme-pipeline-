@@ -1,6 +1,6 @@
+#!/usr/bin/env python3
 
-
-
+import argparse
 
 def readData(file="mass_to_charge file.txt", lower=1000, upper=1500):
     dataFile = open(file, "r")
@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
 
 
-    import argparse
+    
     # The help message
     parser = argparse.ArgumentParser( description = "The script can be run in different modes. For example, mode 1 returns the number of peptides in a given mass range. It calculates  the total number of peptides given a lower and upper bounds for m/z values. Mode 2 return uniquely identified peptides given a range, and a binsize through the plotting of an histogram. Mode 3, similarly to mode 2, returns uniquely identified protein through the usage of sliding windows. Mode 3 requires the input of a range, a window size, and a stepsize.") 
 
