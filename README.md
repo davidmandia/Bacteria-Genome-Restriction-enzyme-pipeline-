@@ -40,6 +40,7 @@ This pipeline automates the process of identifying and analyzing peptides from a
 To automate the process, use the provided bash script `run_pipeline.sh`:
 ```bash
 ./run_pipeline.sh <min_orf> <restriction_type> <pepmin> <mass_type> <start> <end>
+```
 
 ### Example of output in Mode 2
 
