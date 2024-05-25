@@ -42,8 +42,11 @@ To automate the process, use the provided bash script `run_pipeline.sh`:
 ./run_pipeline.sh <min_orf> <restriction_type> <pepmin> <mass_type> <start> <end>
 ```
 
-### Example of output in Mode 2
+### Example of picture output in Mode 2 (Uniquely identified proteins )
 
    - It returns a graph with count of peptides fragment with m/z ratio within that bin
 ![Mass to charge distribution](https://github.com/davidmandia/Bacteria-Genome-Restriction-enzyme-pipeline-/blob/main/Mass%20to%20charge%20distribution.png)
+
+#### The outpout is txt file as well containing the identified peptide fragment and the binsize it was identified within.
+#### Mode 3 Also produce a txt file with the same info and a graph. However, the graph could be hard to read
 
